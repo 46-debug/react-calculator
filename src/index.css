@@ -1,13 +1,168 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+
+body{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+ --btn-color: #DADADA;
+ --btn-accent: #ffffff;
+ --font:"Orbitron";
+ --font-size: 25px;
+ --dropShadow:
+}
+
+.main_div{
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset -5px -5px 5px 0px rgba(0, 0, 0, 0.4), inset 5px 5px 5px 0px rgba(255, 255, 255, 0.4);
+}
+
+.calc_main input{
+  width: 350px;
+  padding: 40px 10px;
+  border-radius: 10px;
+  border: none;
+  text-align: right;
+  background-color: #404040;
+  color: #111111;
+  font-size: var(--font-size);
+  font-family: var(--font);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3), inset -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.btn_div{
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #B9B9B9;
+  padding: 15px 10px;
+  box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 0.3), 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+}
+
+.btn_div button{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  border: none;
+  font-family: var(--font);
+  font-size: var(--font-size);
+  box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.6), inset -5px -5px 5px 0px rgba(255, 255, 255, 1);
+  box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 1), 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.calc_main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.opp_b{
+  color: rgb(0, 0, 0);
+  background-color: #B9B9B9;
+}
+
+.num_b{
+  background-color: var(--btn-color);
+}
+
+@media screen and (max-width: 400px) {
+  .inpt_main input{
+    width: 310px;
+  }
+  .btn_div{
+    width: 310px;
+  }
+  .btn_div button{
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .calc_main input{
+    width: 240px;
+  }
+  .btn_div{
+    width: 240px;
+  }
+  .btn_div button{
+    width: 41px;
+    height: 41px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 650px){
+  .calc_main input{
+    width: 240px;
+  }
+  .btn_div{
+    width: 240px;
+  }
+  .btn_div button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-height: 450px){
+ .calc_main{
+  flex-direction: row;
+  align-items: flex-start;
+ }
+.btn_div{
+  margin-bottom: 0px;
+}
+}
+
+.style span{
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 100%;
+  box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.6), inset -5px -5px 5px 0px rgba(255, 255, 255, 1);
+  box-shadow: -2px -2px 5px 0px rgba(255, 255, 255, 1), 2px 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+.style{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.inpt_main{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#o{
+  background-color: #dccae7;
+}
+
+#t{
+  background-color: #d7cda8;
+}
+
+#th{
+  background-color: #91ed97;
+}
+
+#f{
+  background-color: #9acfe4;
 }
